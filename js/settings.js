@@ -34,3 +34,9 @@ function updateDetailed() {
   checked = document.getElementById("detailedInfo1").checked;
   setCookie("detailedInfos", checked, 99999);
 }
+
+function executePull() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "pull.php");
+  xhttp.send();
+}

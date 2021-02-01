@@ -21,9 +21,10 @@ require_once('includes/header.php');
   }
 </style>
 
-<div class="input-group mb-3">
+<div class="container-fluid">
+<d class="input-group mb-3">
   <input id="apiusername" type="text" class="form-control border border-success apiusername" placeholder="Username" aria-label="Username" aria-describedby="button-addon2">
-</div>
+</d>
 
 
 <div class="input-group mb-3">
@@ -35,7 +36,7 @@ require_once('includes/header.php');
   <div class="row">
     <div class="col-sm">
       <div class="btn-group" role="group">
-      <span class="input-group-text" id="inputGroup-sizing-lg">More detailed Statistics</span>
+        <span class="input-group-text" id="inputGroup-sizing-lg">More detailed Statistics</span>
         <input type="radio" class="btn-check detailedInfo1" name="detailedInfo" id="detailedInfo1" autocomplete="off" checked>
         <label style="letter-spacing: 1px;" class="btn text-uppercase btn-outline-success" for="detailedInfo1"><b>Activate</b></label>
 
@@ -46,6 +47,12 @@ require_once('includes/header.php');
   </div>
 </div>
 
+<br>
+<div class="container-fluid">
+  <button type="button" onclick="executePull()" class="btn w-100 btn-dark btn-outline-light">Update Server (Execute <code>git pull</code>)</button>
+</div>
+
+</div>
 <script>
   $(".detailedInfo1").on('change', function() {
     updateDetailed();
