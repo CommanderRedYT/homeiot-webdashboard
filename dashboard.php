@@ -38,7 +38,7 @@ function led(string $device, string $thing, int $size = 32)
         $margin_top = "8px";
     }
     echo ("
-    <div class=\"led $align\" style=\"display:flex;align-items:center;\">
+    <div class=\"led\" style=\"display:flex;align-items:center;\">
 <p id=\"$thing\" data-device=\"$device\" class=\"text-center led text api\">help
 </p>
 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"$size\" height=\"$size\" fill=\"white\" class=\"bi bi-lightbulb led true active\" viewBox=\"0 0 16 16\" style=\"margin-left: 12px; margin-top: $margin_top\">
@@ -138,7 +138,7 @@ function temperature(string $device, string $thing, int $maxVal, int $width, boo
             break;
     }
     echo ("
-            <div style=\"width: $width\" class=\"$thing\">
+            <div style=\"display:flex;align-items:center; width: $width\" class=\"$thing\">
             <canvas style=\"width: $width\" id=\"$thing\" data-device=\"$device\" class=\"gauge api\">
             </canvas>
             <div class=\"gauge-preview\" id=\"preview-$thing\"></div>
@@ -195,7 +195,7 @@ function humidity(string $device, string $thing, int $width)
     $varname .= $thing;
     $width .= "px";
     echo ("
-            <div style=\"width: $width\" class=\"$thing\">
+    <div style=\"display:flex;align-items:center; width: $width\" class=\"$thing\">
             <canvas style=\"width: $width\" id=\"$thing\" data-device=\"$device\" class=\"gauge api\">
             </canvas>
             <div class=\"gauge-preview\" id=\"preview-$thing\"></div>
